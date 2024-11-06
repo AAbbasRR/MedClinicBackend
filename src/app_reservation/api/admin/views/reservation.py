@@ -35,7 +35,7 @@ class AdminReservationExportListAPIView(generics.CustomListAPIView):
     permission_classes = [IsAuthenticatedPermission, IsAdminUserPermission]
     versioning_class = BaseVersioning
     serializer_class = AdminReservationSerializer
-    queryset = ReservationModel.objects.all().order_by("-created_at")
+    queryset = ReservationModel.objects.all().order_by("year", "month", "date")
     search_fields = (
         "first_name",
         "last_name",
