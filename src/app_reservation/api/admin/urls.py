@@ -10,4 +10,9 @@ urlpatterns = [
         AdminReservationListAPIView.as_view(),
         name="list_reservations",
     ),
+    path(
+        "list/export/",
+        AdminReservationExportListAPIView.as_view(),
+        name="list_export_reservations",
+    ),
 ]

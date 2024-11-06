@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-02 11:14+0330\n"
+"POT-Creation-Date: 2024-11-06 18:43+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,38 @@ msgstr "آدرس"
 #: app_doctor/models/doctors.py:17
 msgid "Field"
 msgstr "تخصص"
+
+#: app_reservation/api/admin/serializers/reservation.py:39
+msgid "doctor"
+msgstr "دکتر"
+
+#: app_reservation/api/admin/serializers/reservation.py:40
+msgid "date"
+msgstr "تاریخ"
+
+#: app_reservation/api/admin/serializers/reservation.py:41
+msgid "day_of_week"
+msgstr "روز هفته"
+
+#: app_reservation/api/admin/serializers/reservation.py:42
+msgid "time"
+msgstr "زمان"
+
+#: app_reservation/api/admin/serializers/reservation.py:43
+msgid "first_name"
+msgstr "نام"
+
+#: app_reservation/api/admin/serializers/reservation.py:44
+msgid "last_name"
+msgstr "نام خانوادگی"
+
+#: app_reservation/api/admin/serializers/reservation.py:45
+msgid "national_code"
+msgstr "کد ملی"
+
+#: app_reservation/api/admin/serializers/reservation.py:46
+msgid "mobile_number"
+msgstr "شماره تماس"
 
 #: app_reservation/models/reservation.py:11
 msgid "Reservation"

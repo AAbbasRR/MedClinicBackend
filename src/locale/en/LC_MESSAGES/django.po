@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-02 11:14+0330\n"
+"POT-Creation-Date: 2024-11-06 18:43+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,6 +65,38 @@ msgstr ""
 
 #: app_doctor/models/doctors.py:17
 msgid "Field"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:39
+msgid "doctor"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:40
+msgid "date"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:41
+msgid "day_of_week"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:42
+msgid "time"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:43
+msgid "first_name"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:44
+msgid "last_name"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:45
+msgid "national_code"
+msgstr ""
+
+#: app_reservation/api/admin/serializers/reservation.py:46
+msgid "mobile_number"
 msgstr ""
 
 #: app_reservation/models/reservation.py:11
