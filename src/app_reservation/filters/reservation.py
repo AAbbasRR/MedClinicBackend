@@ -8,4 +8,4 @@ class ReservationListFilter(FilterSet):
 
     class Meta:
         model = ReservationModel
-        fields = ["doctor", "day_of_week", "created_at"]
+        fields = ["doctor", "date", "time", "created_at"]

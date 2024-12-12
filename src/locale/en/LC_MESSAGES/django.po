@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-06 18:43+0330\n"
+"POT-Creation-Date: 2024-12-12 17:40+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app_doctor/models/datetimes.py:11
+#: app_doctor/models/datetimes.py:13
 msgid "Doctor DateTime"
 msgstr ""
 
-#: app_doctor/models/datetimes.py:12
+#: app_doctor/models/datetimes.py:14
 msgid "Doctor DateTimes"
 msgstr ""
 
-#: app_doctor/models/datetimes.py:19 app_doctor/models/doctors.py:10
-#: app_reservation/models/reservation.py:18
+#: app_doctor/models/datetimes.py:21 app_doctor/models/doctors.py:10
+#: app_reservation/models/reservation.py:19
 msgid "Doctor"
 msgstr ""
 
-#: app_doctor/models/datetimes.py:21 app_reservation/models/reservation.py:23
-msgid "Day of week"
+#: app_doctor/models/datetimes.py:23 app_reservation/models/reservation.py:21
+msgid "Date"
 msgstr ""
 
-#: app_doctor/models/datetimes.py:22 app_reservation/models/reservation.py:24
+#: app_doctor/models/datetimes.py:24 app_reservation/models/reservation.py:22
 msgid "Start time"
 msgstr ""
 
-#: app_doctor/models/datetimes.py:23
+#: app_doctor/models/datetimes.py:25
 msgid "Active"
 msgstr ""
 
@@ -67,35 +67,23 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
-#: app_reservation/api/admin/serializers/reservation.py:39
+#: app_reservation/api/admin/serializers/reservation.py:34
 msgid "doctor"
 msgstr ""
 
-#: app_reservation/api/admin/serializers/reservation.py:40
+#: app_reservation/api/admin/serializers/reservation.py:35
 msgid "date"
 msgstr ""
 
-#: app_reservation/api/admin/serializers/reservation.py:41
-msgid "day_of_week"
-msgstr ""
-
-#: app_reservation/api/admin/serializers/reservation.py:42
+#: app_reservation/api/admin/serializers/reservation.py:36
 msgid "time"
 msgstr ""
 
-#: app_reservation/api/admin/serializers/reservation.py:43
-msgid "first_name"
+#: app_reservation/api/admin/serializers/reservation.py:37
+msgid "full_name"
 msgstr ""
 
-#: app_reservation/api/admin/serializers/reservation.py:44
-msgid "last_name"
-msgstr ""
-
-#: app_reservation/api/admin/serializers/reservation.py:45
-msgid "national_code"
-msgstr ""
-
-#: app_reservation/api/admin/serializers/reservation.py:46
+#: app_reservation/api/admin/serializers/reservation.py:38
 msgid "mobile_number"
 msgstr ""
 
@@ -107,31 +95,11 @@ msgstr ""
 msgid "Reservations"
 msgstr ""
 
-#: app_reservation/models/reservation.py:20
-msgid "Year"
-msgstr ""
-
-#: app_reservation/models/reservation.py:21
-msgid "Month"
-msgstr ""
-
-#: app_reservation/models/reservation.py:22
-msgid "Date"
-msgstr ""
-
-#: app_reservation/models/reservation.py:25
+#: app_reservation/models/reservation.py:23
 msgid "First Name"
 msgstr ""
 
-#: app_reservation/models/reservation.py:26
-msgid "Last Name"
-msgstr ""
-
-#: app_reservation/models/reservation.py:27
-msgid "National code"
-msgstr ""
-
-#: app_reservation/models/reservation.py:28
+#: app_reservation/models/reservation.py:24
 msgid "Mobile number"
 msgstr ""
 

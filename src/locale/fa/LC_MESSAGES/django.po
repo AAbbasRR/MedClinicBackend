@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-06 18:43+0330\n"
+"POT-Creation-Date: 2024-12-12 17:40+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app_doctor/models/datetimes.py:11
+#: app_doctor/models/datetimes.py:13
 msgid "Doctor DateTime"
 msgstr "زمان دکتر"
 
-#: app_doctor/models/datetimes.py:12
+#: app_doctor/models/datetimes.py:14
 msgid "Doctor DateTimes"
 msgstr "زمان های دکتر"
 
-#: app_doctor/models/datetimes.py:19 app_doctor/models/doctors.py:10
-#: app_reservation/models/reservation.py:18
+#: app_doctor/models/datetimes.py:21 app_doctor/models/doctors.py:10
+#: app_reservation/models/reservation.py:19
 msgid "Doctor"
 msgstr "دکتر"
 
-#: app_doctor/models/datetimes.py:21 app_reservation/models/reservation.py:23
-msgid "Day of week"
-msgstr "روز هفته"
+#: app_doctor/models/datetimes.py:23 app_reservation/models/reservation.py:21
+msgid "Date"
+msgstr "تاریخ"
 
-#: app_doctor/models/datetimes.py:22 app_reservation/models/reservation.py:24
+#: app_doctor/models/datetimes.py:24 app_reservation/models/reservation.py:22
 msgid "Start time"
 msgstr "زمان شروع"
 
-#: app_doctor/models/datetimes.py:23
+#: app_doctor/models/datetimes.py:25
 msgid "Active"
 msgstr "فعال"
 
@@ -67,35 +67,23 @@ msgstr "آدرس"
 msgid "Field"
 msgstr "تخصص"
 
-#: app_reservation/api/admin/serializers/reservation.py:39
+#: app_reservation/api/admin/serializers/reservation.py:34
 msgid "doctor"
 msgstr "دکتر"
 
-#: app_reservation/api/admin/serializers/reservation.py:40
+#: app_reservation/api/admin/serializers/reservation.py:35
 msgid "date"
 msgstr "تاریخ"
 
-#: app_reservation/api/admin/serializers/reservation.py:41
-msgid "day_of_week"
-msgstr "روز هفته"
-
-#: app_reservation/api/admin/serializers/reservation.py:42
+#: app_reservation/api/admin/serializers/reservation.py:36
 msgid "time"
 msgstr "زمان"
 
-#: app_reservation/api/admin/serializers/reservation.py:43
-msgid "first_name"
-msgstr "نام"
+#: app_reservation/api/admin/serializers/reservation.py:37
+msgid "full_name"
+msgstr "نام و نام خانوادگی"
 
-#: app_reservation/api/admin/serializers/reservation.py:44
-msgid "last_name"
-msgstr "نام خانوادگی"
-
-#: app_reservation/api/admin/serializers/reservation.py:45
-msgid "national_code"
-msgstr "کد ملی"
-
-#: app_reservation/api/admin/serializers/reservation.py:46
+#: app_reservation/api/admin/serializers/reservation.py:38
 msgid "mobile_number"
 msgstr "شماره تماس"
 
@@ -107,31 +95,11 @@ msgstr "رزرو"
 msgid "Reservations"
 msgstr "رزروها"
 
-#: app_reservation/models/reservation.py:20
-msgid "Year"
-msgstr "سال"
-
-#: app_reservation/models/reservation.py:21
-msgid "Month"
-msgstr "ماه"
-
-#: app_reservation/models/reservation.py:22
-msgid "Date"
-msgstr "تاریخ"
-
-#: app_reservation/models/reservation.py:25
+#: app_reservation/models/reservation.py:23
 msgid "First Name"
 msgstr "نام"
 
-#: app_reservation/models/reservation.py:26
-msgid "Last Name"
-msgstr "نام خانوادگی"
-
-#: app_reservation/models/reservation.py:27
-msgid "National code"
-msgstr "کد ملی"
-
-#: app_reservation/models/reservation.py:28
+#: app_reservation/models/reservation.py:24
 msgid "Mobile number"
 msgstr "شماره تماس"
 
@@ -201,7 +169,7 @@ msgstr "رمز عبور با موفقیت عوض شد"
 
 #: utils/base_errors.py:56
 msgid "Invalid Email Or Password."
-msgstr "ایمیل"
+msgstr "ایمیل یا رمز عبور اشتباه است"
 
 #: utils/base_errors.py:57
 msgid "Old Password Is Incorrect."
@@ -248,3 +216,27 @@ msgstr "پاک شده"
 #: utils/db/models/soft_delete.py:69
 msgid "Deleted Time"
 msgstr "زمان پاک شدن"
+
+#~ msgid "Day of week"
+#~ msgstr "روز هفته"
+
+#~ msgid "day_of_week"
+#~ msgstr "روز هفته"
+
+#~ msgid "first_name"
+#~ msgstr "نام"
+
+#~ msgid "national_code"
+#~ msgstr "کد ملی"
+
+#~ msgid "Year"
+#~ msgstr "سال"
+
+#~ msgid "Month"
+#~ msgstr "ماه"
+
+#~ msgid "Last Name"
+#~ msgstr "نام خانوادگی"
+
+#~ msgid "National code"
+#~ msgstr "کد ملی"

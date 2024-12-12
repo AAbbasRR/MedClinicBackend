@@ -10,6 +10,7 @@ class Reservation(AbstractDateModel, AbstractSoftDeleteModel):
     class Meta(AbstractDateModel.Meta, AbstractSoftDeleteModel.Meta):
         verbose_name = _("Reservation")
         verbose_name_plural = _("Reservations")
+        unique_together = (("doctor", "date", "time"),)
 
     doctor = models.ForeignKey(
         Doctor,
@@ -17,15 +18,10 @@ class Reservation(AbstractDateModel, AbstractSoftDeleteModel):
         related_name="doctor_reservs",
         verbose_name=_("Doctor"),
     )
-    year = models.IntegerField(verbose_name=_("Year"))
-    month = models.CharField(max_length=32, verbose_name=_("Month"))
-    date = models.IntegerField(verbose_name=_("Date"))
-    day_of_week = models.CharField(max_length=64, verbose_name=_("Day of week"))
+    date = models.DateField(verbose_name=_("Date"))
     time = models.TimeField(verbose_name=_("Start time"))
-    first_name = models.CharField(max_length=128, verbose_name=_("First Name"))
-    last_name = models.CharField(max_length=128, verbose_name=_("Last Name"))
-    national_code = models.CharField(max_length=64, verbose_name=_("National code"))
+    full_name = models.CharField(max_length=256, verbose_name=_("First Name"))
     mobile_number = models.CharField(max_length=64, verbose_name=_("Mobile number"))
 
     def __str__(self):
-        return f"{self.year}/{self.month}/{self.date} | {self.time} | {self.first_name} {self.last_name}"
+        return f"{self.date} | {self.time} | {self.full_name}"

@@ -13,7 +13,7 @@ class AdminDoctorDateTimesListCreateAPIView(generics.CustomListCreateAPIView):
     permission_classes = [IsAuthenticatedPermission, IsAdminUserPermission]
     versioning = BaseVersioning
     serializer_class = AdminDoctorDateTimeModelSerializer
-    queryset = DoctorDateTimeModel.objects.all().order_by("day_of_week", "time")
+    queryset = DoctorDateTimeModel.objects.all().order_by("date", "time")
     filterset_class = DoctorsListFilter
 
 

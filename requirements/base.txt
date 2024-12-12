@@ -14,6 +14,7 @@ django-import-export==4.2.0
 django-modeltranslation==0.19.10
 djangorestframework==3.15.2
 djangorestframework-simplejwt==5.3.1
+et_xmlfile==2.0.0
 filelock==3.16.1
 gunicorn==23.0.0
 identify==2.6.1
@@ -21,7 +22,9 @@ idna==3.10
 jalali_core==1.0.0
 jdatetime==5.0.0
 nodeenv==1.9.1
+openpyxl==3.1.5
 packaging==24.1
+persian_sms_manager==2.0.0
 platformdirs==4.3.6
 pre_commit==4.0.1
 psycopg2-binary==2.9.10

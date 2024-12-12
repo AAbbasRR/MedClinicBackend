@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from app_reservation.api.admin.serializers.reservation import (
     AdminReservationSerializer,
     AdminReservationExportResource,
+    AdminCreateReservationSerializer,
 )
 from app_reservation.models import ReservationModel
 from app_reservation.filters.reservation import ReservationListFilter
@@ -18,32 +19,34 @@ class AdminReservationListAPIView(generics.CustomListCreateAPIView):
     versioning = BaseVersioning
     serializer_class = AdminReservationSerializer
     pagination_class = BasePagination
-    queryset = ReservationModel.objects.all().order_by("-created_at")
+    queryset = ReservationModel.objects.all().order_by("date", "time")
     search_fields = (
-        "first_name",
-        "last_name",
+        "full_name",
         "doctor__name",
         "doctor__field",
         "mobile_number",
-        "day_of_week",
-        "month",
+        "date",
     )
     filterset_class = ReservationListFilter
+
+
+class AdminCreateReservationAPIView(generics.CustomCreateAPIView):
+    permission_classes = [IsAuthenticatedPermission, IsAdminUserPermission]
+    versioning = BaseVersioning
+    serializer_class = AdminCreateReservationSerializer
 
 
 class AdminReservationExportListAPIView(generics.CustomListAPIView):
     permission_classes = [IsAuthenticatedPermission, IsAdminUserPermission]
     versioning_class = BaseVersioning
     serializer_class = AdminReservationSerializer
-    queryset = ReservationModel.objects.all().order_by("year", "month", "date")
+    queryset = ReservationModel.objects.all().order_by("date", "time")
     search_fields = (
-        "first_name",
-        "last_name",
+        "full_name",
         "doctor__name",
         "doctor__field",
         "mobile_number",
-        "day_of_week",
-        "month",
+        "date",
     )
     filterset_class = ReservationListFilter
 

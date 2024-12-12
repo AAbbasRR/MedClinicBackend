@@ -3,6 +3,8 @@ from django.dispatch import receiver
 from django.conf import settings
 
 from app_reservation.models import ReservationModel
+
+from utils.functions import get_jalali_day_of_week
 import requests
 
 
@@ -20,10 +22,10 @@ def create_reserve_handler(sender, instance, created, **kwargs):
                 "sender": "+983000505",
                 "recipient": instance.mobile_number,
                 "variable": {
-                    "full_name": f"{instance.first_name} {instance.last_name}",
+                    "full_name": f"{instance.full_name}",
                     "doctor_name": f"{instance.doctor.name}({instance.doctor.field})",
                     "time": str(instance.time),
-                    "date": f"{instance.day_of_week} {instance.date} {instance.month} ماه {instance.year}",
+                    "date": f"{get_jalali_day_of_week(str(instance.date).replace('-', '/'))} {str(instance.date)}",
                 },
             },
         )

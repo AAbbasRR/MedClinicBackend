@@ -1,3 +1,6 @@
+import jdatetime
+
+
 def get_client_ip(request):
     """
     Extracts the real client IP address from the request, considering proxies and load balancers.
@@ -18,3 +21,18 @@ def get_client_ip(request):
     else:
         ip = request.META.get("REMOTE_ADDR", "").strip()
     return ip
+
+
+def get_jalali_day_of_week(jalali_date_str):
+    year, month, day = map(int, jalali_date_str.split("/"))
+    date = jdatetime.date(year, month, day)
+    days_of_week = [
+        "شنبه",
+        "یکشنبه",
+        "دوشنبه",
+        "سه‌شنبه",
+        "چهارشنبه",
+        "پنج‌شنبه",
+        "جمعه",
+    ]
+    return days_of_week[date.weekday()]

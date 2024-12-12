@@ -14,6 +14,6 @@ class UsersDoctorDateTimesListAPIView(generics.CustomListAPIView):
     versioning = BaseVersioning
     serializer_class = UsersDoctorDateTimeModelSerializer
     queryset = DoctorDateTimeModel.objects.filter(is_active=True).order_by(
-        "day_of_week", "time"
+        "date", "time"
     )
     filterset_class = DoctorsListFilter

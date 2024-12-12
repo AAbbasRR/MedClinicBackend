@@ -44,14 +44,9 @@ class UsersReservationSerializer(CustomModelSerializer):
         fields = (
             "id",
             "doctor",
-            "year",
-            "month",
             "date",
-            "day_of_week",
             "time",
-            "first_name",
-            "last_name",
-            "national_code",
+            "full_name",
             "mobile_number",
             "otp",
         )
