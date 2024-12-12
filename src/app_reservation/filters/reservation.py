@@ -4,8 +4,8 @@ from app_reservation.models import ReservationModel
 
 
 class ReservationListFilter(FilterSet):
-    created_at = DateTimeFromToRangeFilter(field_name="created_at")
+    date = DateTimeFromToRangeFilter(field_name="date")
 
     class Meta:
         model = ReservationModel
-        fields = ["doctor", "date", "time", "created_at"]
+        fields = ["doctor", "date", "time"]
