@@ -22,7 +22,7 @@ class UsersReservSendOTPSerializer(CustomModelSerializer):
         otp_code = create_otp_code(5)
         try:
             settings_for_use_redis = SettingsModel.objects.get(
-                key=SettingsModel.TypeOptions.USE_REDIS_CACHE
+                type=SettingsModel.TypeOptions.USE_REDIS_CACHE
             )
             if bool(int(settings_for_use_redis.value)):
                 self._send_otp_code_with_db(otp_code)
@@ -77,7 +77,7 @@ class UsersReservationSerializer(CustomModelSerializer):
         is_valid = False
         try:
             settings_for_use_redis = SettingsModel.objects.get(
-                key=SettingsModel.TypeOptions.USE_REDIS_CACHE
+                type=SettingsModel.TypeOptions.USE_REDIS_CACHE
             )
             if bool(int(settings_for_use_redis.value)):
                 is_valid = self._validate_with_redis(
