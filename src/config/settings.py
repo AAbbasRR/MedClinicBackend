@@ -192,6 +192,8 @@ LOCALE_PATHS = [
 ]
 
 MEDIANA_API_KEY = config("MEDIANA_API_KEY")
+SMS_SEND_CODE = config("SMS_SEND_CODE")
+SMS_SEND_INFO = config("SMS_SEND_INFO")
 
 # Request API options
 CORS_ORIGIN_ALLOW_ALL = True

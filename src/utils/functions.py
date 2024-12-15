@@ -1,4 +1,6 @@
 import jdatetime
+import random
+import string
 
 
 def get_client_ip(request):
@@ -27,12 +29,16 @@ def get_jalali_day_of_week(jalali_date_str):
     year, month, day = map(int, jalali_date_str.split("/"))
     date = jdatetime.date(year, month, day)
     days_of_week = [
-        "شنبه",
-        "یکشنبه",
         "دوشنبه",
         "سه‌شنبه",
         "چهارشنبه",
         "پنج‌شنبه",
         "جمعه",
+        "شنبه",
+        "یکشنبه",
     ]
     return days_of_week[date.weekday()]
+
+
+def create_otp_code(length: int) -> str:
+    return "".join(random.choices(string.digits, k=length))

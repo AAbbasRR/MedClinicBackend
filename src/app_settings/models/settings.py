@@ -16,6 +16,7 @@ class Settings(AbstractDateModel):
         GATEWAY_TOKEN = "gateway_token", _("Gateway Token")
         RESERVE_PRICE = "reserve_price", _("Reserve Price")
         TERMS_CONTENT = "terms_content", _("Terms Content")
+        USE_REDIS_CACHE = "use_redis_cache", _("Use Redis Cache")
 
     type = models.CharField(
         max_length=16, choices=TypeOptions.choices, unique=True, verbose_name=_("Type")
