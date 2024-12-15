@@ -27,9 +27,9 @@ class UsersReservSendOTPSerializer(CustomModelSerializer):
             if bool(int(settings_for_use_redis.value)):
                 self._send_otp_code_with_redis(otp_code, attrs["mobile_number"])
             else:
-                self._send_otp_code_with_db(otp_code)
+                self._send_otp_code_with_db(otp_code, attrs["mobile_number"])
         except SettingsModel.DoesNotExist:
-            self._send_otp_code_with_db(otp_code)
+            self._send_otp_code_with_db(otp_code, attrs["mobile_number"])
         return attrs
 
     def _send_otp_code_with_redis(self, otp_code, mobile_number):
