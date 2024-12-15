@@ -56,6 +56,19 @@ class UsersReservSendOTPSerializer(CustomModelSerializer):
         )
         otp_object.otp_code = otp_code
         otp_object.save()
+        requests.post(
+            "https://api2.ippanel.com/api/v1/sms/pattern/normal/send",
+            headers={
+                "Content-Type": "application/json",
+                "apikey": settings.MEDIANA_API_KEY,
+            },
+            json={
+                "code": settings.SMS_SEND_CODE,
+                "sender": "+983000505",
+                "recipient": mobile_number,
+                "variable": {"OTP": otp_code},
+            },
+        )
 
 
 class UsersReservationSerializer(CustomModelSerializer):
